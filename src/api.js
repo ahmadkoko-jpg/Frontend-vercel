@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL||"https://backend-vercel-pi-blue.vercel.app";;
 
 export async function api(path, { method = "GET", body, token } = {}) {
   const res = await fetch(`${API}${path}`, {
